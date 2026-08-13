@@ -156,7 +156,6 @@ function Login({ register = false }) {
   return (
     <div className="auth">
       <form onSubmit={sub} className="card authcard form">
-        <div className="logo">L</div>
         <h1>{register ? "Create staff account" : "Welcome back"}</h1>
         <p>
           {register
