@@ -326,7 +326,7 @@ header p {
     padding: 18px;
   }
   .user {
-    display: none;
+    margin-top: 15px;
   }
   .shell nav {
     display: grid;
