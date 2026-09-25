@@ -6,6 +6,7 @@ import AuthModal from './components/auth/AuthModal';
 import LibrarianDashboard from './components/librarian/LibrarianDashboard';
 import MemberDashboard from './components/member/MemberDashboard';
 import { BookOpen, Sparkles, Shield, User, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ADMIN_URL } from './services/api';
 
 function AppContent() {
   const { currentUser } = useLibrary();
@@ -101,7 +102,7 @@ function AppContent() {
                   </div>
                 </div>
                 <a
-                  href="http://127.0.0.1:8000/admin/"
+                  href={ADMIN_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition flex items-center justify-center gap-1.5 shrink-0 text-center"

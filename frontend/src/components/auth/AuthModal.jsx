@@ -14,6 +14,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { useLibrary } from '../../context/LibraryContext';
+import { ADMIN_URL } from '../../services/api';
 
 export default function AuthModal({ isOpen, onClose, initialMode = 'login' }) {
   const { login, register } = useLibrary();
@@ -263,7 +264,7 @@ export default function AuthModal({ isOpen, onClose, initialMode = 'login' }) {
                 <p className="text-[11px] text-slate-400">
                   Librarian / Staff: Sign in above or access the{' '}
                   <a
-                    href="http://127.0.0.1:8000/admin/"
+                    href={ADMIN_URL}
                     target="_blank"
                     rel="noreferrer"
                     className="text-slate-600 underline hover:text-indigo-600"

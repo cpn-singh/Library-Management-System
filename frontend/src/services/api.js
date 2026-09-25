@@ -1,5 +1,9 @@
 const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
+export const ADMIN_URL = (import.meta.env.VITE_API_BASE_URL
+  ? import.meta.env.VITE_API_BASE_URL.replace(/\/api\/?$/, '')
+  : 'http://127.0.0.1:8000') + '/admin/';
+
 export const TOKEN_STORAGE_KEY = 'athenaeum_token';
 
 export const getToken = () => {

@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { useLibrary } from '../../context/LibraryContext';
 import DigitalCardModal from './DigitalCardModal';
+import { ADMIN_URL } from '../../services/api';
 
 export default function Navbar({ onOpenAuth }) {
   const {
@@ -68,7 +69,7 @@ export default function Navbar({ onOpenAuth }) {
             {currentUser?.role === 'librarian' && (
               <div className="hidden md:flex items-center">
                 <a
-                  href="http://127.0.0.1:8000/admin/"
+                  href={ADMIN_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl border border-indigo-200 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-bold transition shadow-xs"
@@ -246,7 +247,7 @@ export default function Navbar({ onOpenAuth }) {
 
                           {currentUser.role === 'librarian' && (
                             <a
-                              href="http://127.0.0.1:8000/admin/"
+                              href={ADMIN_URL}
                               target="_blank"
                               rel="noreferrer"
                               className="w-full text-left px-4 py-2 text-indigo-700 hover:bg-indigo-50 flex items-center gap-2 font-medium text-xs border-t border-slate-100"
